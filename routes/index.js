@@ -7,5 +7,6 @@ const homeController=require('../controllers/home_controller');
 
 
 router.get('/', homeController.home);
-console.log('router is up');
+router.use('/user',require('./users'));
+
 module.exports=router;

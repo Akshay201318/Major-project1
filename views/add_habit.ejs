@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+           <%=title %>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body class="container">
+        <main id="main">
+            <header>
+               <h1>Add Habit</h1>
+            </header>
+            <div id="container">
+                <div id="addnav">
+                    <ul>
+                        <li><a href="http://localhost:8000/"><h5>Home</h2></a></li>
+                        <li><a href="http://localhost:8000/habits"><h5>View habits</h2></a></li>
+                        <li><a href="http://localhost:8000/Add_habit"><h5>Add a habit</h2></a></li>
+                        <li><a href="http://localhost:8000/today"><h5>Today's Schedule</h2></a></li>
+                        <li><a href="http://localhost:8000/weakly_status"><h5>Weakly status</h2></a></li>
+                    </ul>
+                </div>
+                <div id="form">
+                           
+                    <form action="/add" method="post">
+                        <label for="habitname">Enter Habit Name :</label>
+                        <input type="text" name="habitname" placeholder="Enter habit name" required><br>
+                        &emsp;&emsp;&nbsp;<label for="habitname">Enter Timing :</label>
+                        <input id="time" type="time" name="time" placeholder="Enter time" required><br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="submit">Add Habit</button>
+                    </form>
+                </div>
+    </body>
+</html>

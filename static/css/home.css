@@ -1,0 +1,97 @@
+body
+{
+    background-color: rgba(63, 30, 4, 0.993);
+    
+}
+main
+{
+    background-color: whitesmoke;
+    
+}
+header
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#para
+{
+    color: yellowgreen;
+    font-size: 1.3rem;
+}
+#image
+{
+    width:100%;
+   
+}
+#hab-img
+{
+    width: 100%;
+   
+    
+}
+#nav
+{
+    width:40vw;
+    
+}
+#nav ul
+{
+   list-style-type:none;
+}
+#nav ul li a
+{
+   text-decoration: none;
+}
+#nav ul li a:hover
+{
+   color:yellow;
+}
+#container
+{
+    display: flex;
+}
+
+/***add habit****/
+
+#form
+{
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#form input
+{
+    border-radius: 2.8rem;
+    text-align: center;
+    outline: none;
+}
+#form button
+{
+    border-radius: 2.8rem;
+    text-align: center;
+    outline: none;
+}
+
+#main
+{
+    height: 100vh;
+}
+#addnav
+{
+    width:30%;
+}
+#addnav ul
+{
+    list-style-type:none;
+}
+#addnav ul li a
+{
+   text-decoration: none;
+}
+#addnav ul li a:hover
+{
+   color:yellow;
+}
+#time
+{
+    width:200px;
+}

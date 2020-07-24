@@ -1,0 +1,46 @@
+
+#addnav
+{
+    width:30vw;
+}
+#hab-div
+{
+    width:70vw;
+}
+#hab-div ul
+{
+    list-style-type: none;
+}
+#hab-div ul li
+{
+    margin-top: 3%;
+}
+#hab-div ul li
+{
+    margin-left:20px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    background-color: lightyellow;
+    color: palevioletred;
+}
+#hab-div ul li a
+{
+    background-color: white;
+    color: red;
+}
+.head
+{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#hab-div ul li:hover{
+    background-color: yellowgreen;
+    color: rgb(175, 54, 74);
+}
+#time
+{
+    display: flex;
+    justify-content: space-around;
+}

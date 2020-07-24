@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+           <%=title %>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/habits.css">
+    </head>
+    <body class="container">
+        <main>
+            <header>
+               <h1>Habits</h1>
+            </header>
+            <div id="container">
+                <div id="addnav">
+                    <ul>
+                        <li><a href="http://localhost:8000/"><h5>Home</h2></a></li>
+                        <li><a href="http://localhost:8000/habits"><h5>View habits</h2></a></li>
+                        <li><a href="http://localhost:8000/Add_habit"><h5>Add a habit</h2></a></li>
+                        <li><a href="http://localhost:8000/today"><h5>Today's Schedule</h2></a></li>
+                        <li><a href="http://localhost:8000/weakly_status"><h5>Weakly status</h2></a></li>
+                    </ul>
+                
+                </div>
+                 
+                <div id="hab-div" class="container">
+                    <ul>
+                        <% for(let i of habit_list){
+                            %>
+                            <li>
+                                <div class="head">
+                                    <span><%= i.habitname %></span>
+                                    <div id="time">
+                                        <div>
+                                              <label for="time">Timing</label>
+                                              <span><%= i.time %></span>
+                                        </div>
+                                        <div>
+                                               <a href="/delete-habit/?id=<%= i._id %>">
+                                               <i class="fas fa-window-close"></i>
+                                               </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="head">
+                                    <div>
+                                          <label for="best">Best</label> 
+                                          <span><%= i.best %></span>
+                                    </div> 
+                                    <div>
+                                          <label for="total">Overall</label> 
+                                          <span><%= i.completed %> / <%= i.total %></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <%
+                            }%>
+                    </ul>
+                </div>
+            </div>
+            <script src="https://kit.fontawesome.com/7ffdacbfe9.js" crossorigin="anonymous"></script>
+    </body>
+</html>

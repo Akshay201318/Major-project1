@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>
+           <%=title %>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/habits.css">
+        <link rel="stylesheet" href="/css/weekly.css">
+    </head>
+    <body class="container">
+        <main>
+            <header>
+               <h1>Last week's Schedule</h1>
+            </header>
+            <div id="container">
+
+
+
+                <!--navigation bar-->
+
+
+                <div id="addnav">
+                    <ul>
+                        <li><a href="http://localhost:8000/"><h5>Home</h2></a></li>
+                        <li><a href="http://localhost:8000/habits"><h5>View habits</h2></a></li>
+                        <li><a href="http://localhost:8000/Add_habit"><h5>Add a habit</h2></a></li>
+                        <li><a href="http://localhost:8000/today"><h5>Today's Schedule</h2></a></li>
+                        <li><a href="http://localhost:8000/weakly_status"><h5>Weakly status</h2></a></li>
+                    </ul>
+                
+                </div>
+                 
+                <div id="hab-div" class="container">
+                    <ul>
+
+                        <!--Creating list of habits with weekly status-->
+                        <% for(let i of habit_list){
+                            %>
+                                 <% var k=0 %>                                                                                                          
+                            <div class="habs">
+                                <h1 id="habit"><%=i.habitname%></h1>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                          <td>Last Days</td>
+                                          <td>0</td>
+                                          <td>1</td>
+                                          <td>2</td> 
+                                          <td>3</td>
+                                          <td>4</td>
+                                          <td>5</td>
+                                          <td>6</td> 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Completed</td>
+                                            <td>
+                                                <% for(let j of habit_list1){
+                                                    %>
+                                                    <% if(habit_list1[habit_list1.length-1-k][k].done==true)
+                                                    {%>
+                                                      <a href="http://localhost:8000/weekly_status/done/?id=<%= habit_list1[habit_list1.length-1-k][k]._id %>"><input type="checkbox" checked></a>
+                                                       <%
+                                                    }
+                                                    else
+                                                    { %>
+                                                      <a href="http://localhost:8000/weekly_status/done/?id=<%= habit_list1[habit_list1.length-1-k][k]._id %>"><input type="checkbox"></a>
+                                                       <%
+                                                    } %>
+                                                    <%  k=k+1 %>
+                        
+                                                    <%
+                                                  }%>
+                                         </td>
+                                         <%  k=0 %>
+                                          </tr>
+                                           <tr>
+                                            <td>Skipped</td>
+                                            <td>
+                                            <%  k=0 %>
+                                            <% for(let j of habit_list1){
+                                                %>
+                                                <% if(habit_list1[habit_list1.length-1-k][k].skipped==true)
+                                                {%>
+                                                  <a href="http://localhost:8000/weekly_status/done/?id=<%= habit_list1[habit_list1.length-1-k][k]._id %>"><input type="checkbox" checked></a>
+                                                   <%
+                                                }
+                                                else
+                                                { %>
+                                                  <a href="http://localhost:8000/weekly_status/done/?id=<%= habit_list1[habit_list1.length-1-k][k]._id %>"><input type="checkbox"></a>
+                                                   <%
+                                                } %>
+                                                <%  k=k+1 %>
+                    
+                                                <%
+                                              }%>
+                                            </td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <%
+                            }%>
+                    </ul>
+                </div>
+            </div>
+            <script src="https://kit.fontawesome.com/7ffdacbfe9.js" crossorigin="anonymous"></script>
+    </body>
+</html>

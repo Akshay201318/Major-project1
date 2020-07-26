@@ -44,27 +44,27 @@
                                           <% if(i.done==true)
                                           {%>
                                             <label for="done">Completed</label>
-                                             <input type="checkbox" checked>
+                                            <a href="http://localhost:8000/today/done/?id=<%= i._id %>"><input type="checkbox" checked></a>
                                              <%
                                           }
                                           else
                                           { %>
                                             <label for="done">Completed</label>
-                                             <input type="checkbox">
+                                            <a href="http://localhost:8000/today/done/?id=<%= i._id %>"><input type="checkbox"></a>
                                              <%
                                           } %>
                                     </div> 
                                     <div>
-                                        <% if(i.not_done==true)
+                                        <% if(i.skipped==true)
                                           { %>
                                             <label for="not_done">Skipped</label>
-                                             <input type="checkbox" checked>
+                                            <a href="http://localhost:8000/today/not_done/?id=<%= i._id %>"><input type="checkbox" checked></a>
                                              <%
                                           }
                                           else
                                           { %>
                                             <label for="not_done">Skipped</label>
-                                             <input type="checkbox">
+                                            <a href="http://localhost:8000/today/not_done/?id=<%= i._id %>"><input type="checkbox"></a>
                                              <%
                                           } %>
                                     </div>

@@ -3,16 +3,21 @@ const express=require('express');
 const path= require('path');
 const port=8000;
 const app=express();
-
+app.use(express.urlencoded());
 const db=require('./config/mongoose');
-const Habit=require('./models/habit');
+const {Habit,HabitList}=require('./models/habit');
+
+
+//const Habit=Habits.Habit;
+// const HabitList=Habits.HabitList;
+ const {list}=require('./static/js/add');
 
 //using the router
 //app.use('/',require('./routes'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.set('views',path.join(__dirname,'views'));
-app.use(express.urlencoded());
+
 app.use(express.static('static'));
 
 
@@ -35,14 +40,17 @@ app.get('/habits',async function(req,res){
   });
 });
 
-app.post('/add', function(req,res){
-  //contactList.push(req.body);
+app.post('/add', async function(req,res){
+
 
 
   Habit.create({
     habitname: req.body.habitname,
     time: req.body.time
-}, async function(err, newhabit){
+}
+, async function(err, newhabit){
+
+
 
 
  if(err)
@@ -65,6 +73,8 @@ app.post('/add', function(req,res){
  
 
 });
+
+   list();
       
 });
 

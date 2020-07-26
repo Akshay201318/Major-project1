@@ -1,5 +1,5 @@
 # Habit Tracker
-This is a Cool Habit tracking web application built on node.js. Here you can habits to your schedule and then track those schedules everyday.
+This is a Cool Habit tracking web application built on node.js. Here you can add habits to your schedule and then track those schedules everyday.
 
 - You can add new habits to your schedule.
 - You can remove habits from your schedule.

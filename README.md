@@ -15,10 +15,10 @@ This is a Cool Habit tracking web application built on node.js. Here you can hab
   - [CSS]( https://www.w3schools.com/css/) -for designing the page.
   - [Bootstrap]( https://getbootstrap.com/) -for designing the page.
   - [JavaScript]( https://www.javascript.com/) -for adding various functionalities to the page.
-  -[Node.JS](https://nodejs.org/en/)-for creating a server and to connect our application to the database.
-  -[Express.JS](https://expressjs.com/)-Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-  -[MongoDB](https://www.mongodb.com/)-MongoDB is a document database, which means it stores data in JSON-like documents.
-  -[Mongoose](https://mongoosejs.com/)- It is used to intrect with the MongoDB.
+  - [Node.JS](https://nodejs.org/en/)-for creating a server and to connect our application to the database.
+  - [Express.JS](https://expressjs.com/)-Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile    applications.
+  - [MongoDB](https://www.mongodb.com/)-MongoDB is a document database, which means it stores data in JSON-like documents.
+  - [Mongoose](https://mongoosejs.com/)- It is used to intrect with the MongoDB.
   
  
   
